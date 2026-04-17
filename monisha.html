@@ -1,0 +1,249 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>For Someone Special</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;500&display=swap" rel="stylesheet">
+
+<style>
+body {
+    margin: 0;
+    font-family: 'Poppins', sans-serif;
+    background: black;
+    color: white;
+    overflow: hidden;
+}
+
+.section {
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    flex-direction: column;
+    padding: 20px;
+    opacity: 0;
+    transform: translateY(40px);
+    transition: all 1s ease;
+}
+
+.active {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+h1 { font-size: 2.5rem; }
+p { max-width: 750px; line-height: 1.8; font-size: 1.1rem; }
+
+button {
+    padding: 10px 20px;
+    margin-top: 20px;
+    border-radius: 20px;
+    border: none;
+    cursor: pointer;
+}
+
+/* Gallery */
+.gallery {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+.gallery img {
+    width: 150px;
+    margin: 10px;
+    border-radius: 10px;
+}
+
+/* Hidden message */
+#secret {
+    display: none;
+    margin-top: 20px;
+    font-style: italic;
+    color: #ccc;
+}
+</style>
+</head>
+
+<body>
+
+<!-- 🎶 Background Music -->
+<audio autoplay loop>
+    <source src="https://www.bensound.com/bensound-music/bensound-slowmotion.mp3" type="audio/mp3">
+</audio>
+
+<!-- 🌙 Intro -->
+<div class="section active">
+    <h1 id="type1"></h1>
+    <button onclick="next()">Continue</button>
+</div>
+
+<!-- 💭 Beginning -->
+<div class="section">
+<p>
+You know Monisha…<br><br>
+
+You were the first person from Bengal I met in the mess…<br>
+and then you called others and introduced me.<br>
+I still remember that.<br><br>
+
+Initially, we were becoming really good friends…<br>
+then somehow, we lost touch for more than a year.<br><br>
+
+But koi nahi…<br>
+we found our way back again in the last trimester —<br>
+better than before.<br><br>
+
+“Jo hota hai achhe ke liye hi hota hai.”
+</p>
+<button onclick="next()">Next</button>
+</div>
+
+<!-- 🛕 Temple -->
+<div class="section">
+<p>
+And thank you… for all those temple visits.<br><br>
+
+You may not even realize this,<br>
+but I genuinely loved roaming temples and historical places with you…<br>
+I don’t know why, but it just felt peaceful.<br><br>
+
+Thanjavur, Srirangam, Rockfort, Shiva temple…<br>
+those weren’t just places — they became memories.<br><br>
+
+You are officially my “temple roaming partner” 😄<br><br>
+
+Future e abar chance hole,<br>
+I would really love to explore new places with you again.
+</p>
+<button onclick="next()">Next</button>
+</div>
+
+<!-- 🍀 Lucky -->
+<div class="section">
+<p>
+I still remember Thanjavur…<br><br>
+
+I prayed that both of us get placed in good companies…<br>
+maybe even the same one.<br>
+After all, we came more than 2000+ kilometers from home.<br><br>
+
+But destiny had its own plan…<br>
+we ended up in different companies.<br><br>
+
+Still, I believe this —<br>
+you are my lucky charm… and you always will be.<br><br>
+
+Bas kabhi kabhi lagta hai…<br>
+yeh lucky charm mere saath hamesha hota toh accha hota 🙂
+</p>
+<button onclick="next()">Next</button>
+</div>
+
+<!-- 💭 Care -->
+<div class="section">
+<p>
+You’ll be here… and I know you’ll manage everything,<br>
+but still, thoda concern toh rahega.<br><br>
+
+Amar o work life e pressure thakbe…<br>
+but still, I’ll say this —<br>
+please take care of your health.<br>
+Eat your meals properly.<br><br>
+
+Ami thakle toke forcefully khawatham…<br>
+but unfortunately, I won’t be around now.<br><br>
+
+I know you are strong.<br>
+And I really admire that —<br>
+seeing you independent and confident always felt good.
+</p>
+<button onclick="next()">Next</button>
+</div>
+
+<!-- 🖼️ Gallery -->
+<div class="section">
+<h1>Some Memories 📸</h1>
+<div class="gallery">
+    <img src="yourphoto1.jpg">
+    <img src="yourphoto2.jpg">
+    <img src="yourphoto3.jpg">
+</div>
+<p>(Add your photos here)</p>
+<button onclick="next()">Next</button>
+</div>
+
+<!-- 🌌 Final -->
+<div class="section">
+<p>
+Ho sakega toh…<br>
+we’ll meet again — maybe in a different place,<br>
+maybe under different circumstances…<br>
+(if you wish).<br><br>
+
+Na ichha ho… toh bhi kya hi keh sakte hain 🙂<br><br>
+
+Kuch log special hote hain…<br>
+bina bole hi samajh aa jaate hain.<br><br>
+
+Shayad main kabhi sab kuch directly na bol paun…<br>
+but I hope you feel it.<br><br>
+
+Because what we have… is rare.<br><br>
+
+“Accha chalta hoon, duao mein yaad rakhna…”<br><br>
+
+Kabhi bhi mann kare,<br>
+feel free to reach out.<br>
+I’ll always be happy to be there for you, Monisha.<br><br>
+
+Some connections… don’t really end,<br>
+they just pause.
+</p>
+
+<button onclick="reveal()">Click if you feel something 🤍</button>
+
+<p id="secret">
+Maybe… in another version of life,<br>
+I would have said more.<br><br>
+
+Maybe… I already said enough — just not in words.<br><br>
+
+But for now…<br>
+I’m just really glad… it was you.
+</p>
+
+</div>
+
+<script>
+let current = 0;
+const sections = document.querySelectorAll(".section");
+
+function next() {
+    sections[current].classList.remove("active");
+    current++;
+    sections[current].classList.add("active");
+}
+
+/* typing intro */
+const text = "Hey Monisha 🌙";
+let i = 0;
+function typing() {
+    if (i < text.length) {
+        document.getElementById("type1").innerHTML += text.charAt(i);
+        i++;
+        setTimeout(typing, 80);
+    }
+}
+typing();
+
+/* hidden message */
+function reveal() {
+    document.getElementById("secret").style.display = "block";
+}
+</script>
+
+</body>
+</html>
